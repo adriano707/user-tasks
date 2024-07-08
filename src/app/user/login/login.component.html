@@ -1,0 +1,28 @@
+<div style="max-width: 1100px; margin: auto; margin-top: 40px">
+  <mat-card class="login-container" [class.mat-elevation-z8]="true">
+    <mat-card-header>
+      <mat-card-title>Acesso ao Sistema de cadastro de tarefas</mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <mat-divider></mat-divider>
+      <div style="padding: 10px">
+        <mat-card-content fxLayout="column">
+          <mat-form-field appearance="outline" fxFlex="100" fxFlex.xs="100">
+            <mat-label>Usuário</mat-label>
+            <input type="text" matInput [(ngModel)]="user" />
+          </mat-form-field>
+          <div fxLayout="row">
+            <mat-form-field appearance="outline" fxFlex="50" fxFlex.xs="100">
+              <mat-label>Senha</mat-label>
+              <input type="password" matInput [(ngModel)]="password" />
+            </mat-form-field>
+          </div>
+        </mat-card-content>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="login()">Entrar</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
