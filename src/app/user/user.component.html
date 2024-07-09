@@ -1,1 +1,26 @@
-<p>user works!</p>
+<div>
+  <form [formGroup]="data" class="container" novalidate>
+    <mat-card class="login-container" [class.mat-elevation-z8]="true">
+      <mat-card-header>
+        <mat-card-title>Criar Usuário</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <mat-divider></mat-divider>
+        <div style="padding: 10px">
+          <mat-form-field appearance="outline">
+            <mat-label>Nome de Usuário</mat-label>
+            <input type="text" matInput formControlName="user" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input type="password" matInput formControlName="password" />
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <div>
+        <button class="btn btn-primary" mat-raised-button (click)="save()">Criar</button>
+      </div>
+    </mat-card>
+  </form>
+</div>

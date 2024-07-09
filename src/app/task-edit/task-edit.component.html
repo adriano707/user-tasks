@@ -1,27 +1,28 @@
 <div style="max-width: 1100px;margin: auto;margin-top: 40px">
-  <form [formGroup]="data" novalidate>
+  <form [formGroup]="form" novalidate>
     <mat-card class="event-container" [class.mat-elevation-z8]="true">
       <mat-card-header>
-        <mat-card-title>Criar Tarefas</mat-card-title>
+        <mat-card-title>Editar Tarefas</mat-card-title>
       </mat-card-header>
       <mat-divider></mat-divider>
-      <mat-card-content>
-        <div class="form-group">
-          <mat-form-field appearance="outline">
+      <mat-card-content fxLayout="column">
+        <div fxLayout="row">
+          <mat-form-field appearance="outline" fxFlex="100" fxFlex.xs="100">
             <mat-label>Titulo</mat-label>
-            <input matInput formControlName="title">
+            <input matInput formControlName="titulo">
           </mat-form-field>
         </div>
-        <div class="form-group">
-          <mat-form-field appearance="outline">
+        <div fxLayout="row">
+          <mat-form-field appearance="outline" fxFlex="100" fxFlex.xs="100">
             <mat-label>Descrição</mat-label>
             <input matInput formControlName="description">
           </mat-form-field>
         </div>
+
       </mat-card-content>
       <mat-divider></mat-divider>
       <div style="padding: 5px;" class="acoes">
-        <button class="btn btn-primary" aria-label="Salvar" (click)="save()">
+        <button mat-fab color="stroked" aria-label="Salvar" (click)="save()">
           <mat-icon>save</mat-icon>
         </button>
       </div>
